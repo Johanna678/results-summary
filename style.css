@@ -90,10 +90,20 @@ main.container {
   font-weight: 700;
 }
 
-.categories li img {
+.category-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.category-label img {
   width: 24px;
   height: 24px;
-  margin-right: 12px;
+  display: block;
+}
+
+.categories li span:last-child {
+  opacity: 0.75;
 }
 
 .reaction { background: hsla(0, 100%, 67%, 0.1); color: var(--light-red); }
