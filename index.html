@@ -1,41 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Results Summary Component</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <main class="container">
-    <section class="result">
+  <main class="results-card">
+  
+    <section class="summary-panel">
       <h2>Your Result</h2>
-      <div class="score">
-        <p class="number">76</p>
-        <p class="total">of 100</p>
+      <div class="score-circle">
+        <span class="score-number">76</span>
+        <span class="score-total">of 100</span>
       </div>
       <h3>Great</h3>
-      <p class="description">
+      <p class="summary-text">
         You scored higher than 65% of the people who have taken these tests.
       </p>
     </section>
 
-    <section class="summary">
+   
+    <section class="details-panel">
       <h2>Summary</h2>
-      <ul class="categories">
-        <li class="reaction"><img src="assets/images/icon-reaction.svg" alt="Reaction icon">Reaction <span>80 / 100</span></li>
-        <li class="memory"><img src="assets/images/icon-memory.svg" alt="Memory icon">Memory <span>92 / 100</span></li>
-        <li class="verbal"><img src="assets/images/icon-verbal.svg" alt="Verbal icon">Verbal <span>61 / 100</span></li>
-        <li class="visual"><img src="assets/images/icon-visual.svg" alt="Visual icon">Visual <span>72 / 100</span></li>
+      <ul class="results-list">
+        <li class="result-item reaction">
+          <span class="result-label">
+            <img src="./assets/images/icon-reaction.svg" alt="Reaction icon" />
+            Reaction
+          </span>
+          <span class="result-score"><strong>80</strong> / 100</span>
+        </li>
+        <li class="result-item memory">
+          <span class="result-label">
+            <img src="./assets/images/icon-memory.svg" alt="Memory icon" />
+            Memory
+          </span>
+          <span class="result-score"><strong>92</strong> / 100</span>
+        </li>
+        <li class="result-item verbal">
+          <span class="result-label">
+            <img src="./assets/images/icon-verbal.svg" alt="Verbal icon" />
+            Verbal
+          </span>
+          <span class="result-score"><strong>61</strong> / 100</span>
+        </li>
+        <li class="result-item visual">
+          <span class="result-label">
+            <img src="./assets/images/icon-visual.svg" alt="Visual icon" />
+            Visual
+          </span>
+          <span class="result-score"><strong>72</strong> / 100</span>
+        </li>
       </ul>
-      <button>Continue</button>
+
+      <button class="continue-button">Continue</button>
     </section>
   </main>
-
+<br>
+<br>
+  
   <footer class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io" target="_blank">Frontend Mentor</a>.
+    Challenge by <a href="https://www.frontendmentor.io" target="_blank" rel="noopener noreferrer">Frontend Mentor</a>.
     Coded by <a href="#">Phuti Johanna Manamela</a>.
   </footer>
+  
+
   <script src="script.js"></script>
 </body>
 </html>
