@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap');
+
+:root {
+  --light-red: hsl(0, 100%, 67%);
+  --orangey-yellow: hsl(39, 100%, 56%);
+  --green-teal: hsl(166, 100%, 37%);
+  --cobalt-blue: hsl(234, 85%, 45%);
+  --white: hsl(0, 0%, 100%);
+  --pale-blue: hsl(221, 100%, 96%);
+  --light-lavender: hsl(241, 100%, 89%);
+  --dark-gray-blue: hsl(224, 30%, 27%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Hanken Grotesk', sans-serif;
+  background-color: var(--pale-blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+main.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: var(--white);
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  max-width: 700px;
+  overflow: hidden;
+}
+
+.result {
+  background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+  color: var(--white);
+  text-align: center;
+  padding: 40px;
+}
+
+.result .score {
+  background: linear-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.result .number {
+  font-size: 2.5rem;
+  font-weight: 800;
+}
+
+.result .total {
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
+.summary {
+  padding: 40px;
+}
+
+.summary h2 {
+  margin-bottom: 20px;
+  color: var(--dark-gray-blue);
+}
+
+.categories {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.categories li {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: 700;
+}
+
+.reaction { background: hsla(0, 100%, 67%, 0.1); color: var(--light-red); }
+.memory   { background: hsla(39, 100%, 56%, 0.1); color: var(--orangey-yellow); }
+.verbal   { background: hsla(166, 100%, 37%, 0.1); color: var(--green-teal); }
+.visual   { background: hsla(234, 85%, 45%, 0.1); color: var(--cobalt-blue); }
+
+button {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 30px;
+  background: var(--dark-gray-blue);
+  color: var(--white);
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+button:hover {
+  background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+}
+
+@media (max-width: 768px) {
+  main.container {
+    grid-template-columns: 1fr;
+    max-width: 375px;
+  }
+}
+@media (max-width: 480px) {
+  main.container {
+    transform: scale(0.85);
+    transform-origin: top center;
+    max-width: 100%;
+  }
+
+  .intro, .subscription, .why-us {
+    padding: 10px;
+  }
+
+  .intro h1 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+  }
+
+  .subscription h2,
+  .why-us h2 {
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+  }
+
+  .description,
+  .access,
+  .why-us li {
+    font-size: 0.85rem;
+    line-height: 1.4;
+  }
+
+  .price span {
+    font-size: 1.3rem;
+  }
+
+  button {
+    font-size: 0.85rem;
+    padding: 9px;
+  }
+
+  footer.attribution {
+    font-size: 8px;
+    padding: 6px;
+  }
+}
