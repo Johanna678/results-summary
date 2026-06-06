@@ -9,7 +9,10 @@ fetch('data.json')
       const li = document.createElement('li');
       li.className = item.category.toLowerCase();
       li.innerHTML = `
-        <span>${item.category}</span>
+        <div class="category-label">
+          <img src="${item.icon}" alt="${item.category} icon">
+          <span>${item.category}</span>
+        </div>
         <span>${item.score} / 100</span>
       `;
       categoriesList.appendChild(li);
