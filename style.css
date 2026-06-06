@@ -84,9 +84,16 @@ main.container {
 .categories li {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 12px;
   border-radius: 8px;
   font-weight: 700;
+}
+
+.categories li img {
+  width: 24px;
+  height: 24px;
+  margin-right: 12px;
 }
 
 .reaction { background: hsla(0, 100%, 67%, 0.1); color: var(--light-red); }
